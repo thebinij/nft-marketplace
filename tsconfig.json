@@ -19,6 +19,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "public/pi-sdk.js"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

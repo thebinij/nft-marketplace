@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-   
+    <title>Music NFT MarketPlace</title>
   </head>
   <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
+    <script src="./pi-sdk.js"></script>
+    <script type="module">
+      var runSDKInSandboxMode =import.meta.env.VITE_SANDBOX_SDK;
+      console.log("PI in sandbox",runSDKInSandboxMode)
+      Pi.init({ version: "2.0", sandbox: runSDKInSandboxMode });
+    </script>
     <script type="module" src="/src/main.tsx"></script>
-    <script src="https://sdk.minipi.com/pi-sdk.js"></script>
-    <script>Pi.init({version: "2.0", sandbox:true})</script>
   </body>
 </html>
